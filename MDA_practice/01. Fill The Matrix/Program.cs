@@ -114,7 +114,7 @@ namespace _01.Fill_The_Matrix
                 //change direction in a cycle
                 //down, right, up, left
                 int count_circle = 0;
-
+              
                 do
                 {
                     // DOWN
