@@ -10,14 +10,14 @@ namespace _01.Fill_The_Matrix
     {
         static void Main(string[] args)
         {
-            var nr = int.Parse(Console.ReadLine());
-            var nc = nr;
-            int r = 0;
-            int c = 0;
+            var numberOfRows = int.Parse(Console.ReadLine());
+            var numberOfCols = numberOfRows;
+            int row = 0;
+            int col = 0;
 
             string pattern = Console.ReadLine();
-            int[,] matrix = new int[nr, nc];
-            int counter;
+            int[,] matrix = new int[numberOfRows, numberOfCols];
+            int counter = 1;
 
             //1 5 9 13
             //2 6 10 14
@@ -26,13 +26,12 @@ namespace _01.Fill_The_Matrix
             //
             if (pattern == "a")
             {
-                counter = 1;
-                for (c = 0; c < matrix.GetLength(1); c++)
+                for (col = 0; col < matrix.GetLength(1); col++)
 
                 {
-                    for (r = 0; r < matrix.GetLength(0); r++)
+                    for (row = 0; row < matrix.GetLength(0); row++)
                     {
-                        matrix[r, c] = counter;
+                        matrix[row, col] = counter;
                         counter++;
                     }
                 }
@@ -45,22 +44,21 @@ namespace _01.Fill_The_Matrix
 
             if (pattern == "b")
             {
-                counter = 1;
-                for (c = 0; c < nr; c++)
+                for (col = 0; col < numberOfRows; col++)
                 {
-                    if (c % 2 == 0)
+                    if (col % 2 == 0)
                     {
-                        for (r = 0; r < nr; r++)
+                        for (row = 0; row < numberOfRows; row++)
                         {
-                            matrix[r, c] = counter;
+                            matrix[row, col] = counter;
                             counter++;
                         }
                     }
                     else
                     {
-                        for (r = nr - 1; r > -1; r--)
+                        for (row = numberOfRows - 1; row > -1; row--)
                         {
-                            matrix[r, c] = counter;
+                            matrix[row, col] = counter;
                             counter++;
                         }
                     }
@@ -75,31 +73,30 @@ namespace _01.Fill_The_Matrix
 
             if (pattern == "c")
             {
-                counter = 1;
                 int max_j = 1;
                 //i - the number of iterations
-                for (int i = 1; i < 2 * nr; i++)
+                for (int i = 1; i < 2 * numberOfRows; i++)
                 {
                     //j - the number of elements per iteration
-                    r = nr - i;
-                    if (i > nr)
+                    row = numberOfRows - i;
+                    if (i > numberOfRows)
                     {
-                        max_j = 2 * nr - i;
-                        r = 0;
-                        c = i - nr;
+                        max_j = 2 * numberOfRows - i;
+                        row = 0;
+                        col = i - numberOfRows;
                     }
                     else
                     {
                         max_j = i;
-                        r = nr - i;
-                        c = 0;
+                        row = numberOfRows - i;
+                        col = 0;
                     }
                     for (int j = 1; j < max_j + 1; j++)
                     {
-                        matrix[r, c] = counter;
+                        matrix[row, col] = counter;
                         counter++;
-                        c++;
-                        r++;
+                        col++;
+                        row++;
                     }
                 }
             }
@@ -114,70 +111,46 @@ namespace _01.Fill_The_Matrix
                 //change direction in a cycle
                 //down, right, up, left
                 int count_circle = 0;
-              
+
                 do
                 {
                     // DOWN
-                    c = count_circle;
-                    for (r = count_circle; r < nr; r++)
+                    col = count_circle;
+                    for (row = count_circle; row < numberOfRows - count_circle; row++)
                     {
-                        if (matrix[r, c] == 0)
-                        {
-                            matrix[r, c] = counter;
-                            counter++;
-                        }
-                        else
-                        {
-                            break;
-                        }
+                        matrix[row, col] = counter;
+                        counter++;
                     }
+                    if (counter > numberOfRows * numberOfRows) break;
+                    row = numberOfRows - count_circle - 1;
 
                     // RIGTH
-                    r = nr - count_circle - 1;
-                    for (c = count_circle + 1; c < nr; c++)
+                    for (col = count_circle + 1; col < numberOfRows - count_circle; col++)
                     {
-                        if (matrix[r, c] == 0)
-                        {
-                            matrix[r, c] = counter;
-                            counter++;
-                        }
-                        else
-                        {
-                            break;
-                        }
+                        matrix[row, col] = counter;
+                        counter++;
                     }
+                    if (counter > numberOfRows * numberOfRows) break;
+                    col = numberOfRows - count_circle - 1;
 
                     // UP
-                    c = nr - count_circle - 1;
-                    for (r = nr - 2 - count_circle; r > -1 + count_circle; r--)
+                    for (row = numberOfRows - 2 - count_circle; row > -1 + count_circle; row--)
                     {
-                        if (matrix[r, c] == 0)
-                        {
-                            matrix[r, c] = counter;
-                            counter++;
-                        }
-                        else
-                        {
-                            break;
-                        }
+                        matrix[row, col] = counter;
+                        counter++;
                     }
+                    if (counter > numberOfRows * numberOfRows) break;
+                    row = count_circle;
 
-                    // LEFT
-                    r = count_circle;
-                    for (c = nr - 2 - count_circle; c > -1 + count_circle; c--)
-                    {
-                        if (matrix[r, c] == 0)
-                        {
-                            matrix[r, c] = counter;
-                            counter++;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
                     count_circle++;
-                } while (nr * nr > counter - 1);
+                    // LEFT
+
+                    for (col = numberOfRows - 1 - count_circle; col > -1 + count_circle; col--)
+                    {
+                        matrix[row, col] = counter;
+                        counter++;
+                    }
+                } while (numberOfRows * numberOfRows > counter - 1);
             }
 
 
@@ -195,18 +168,16 @@ namespace _01.Fill_The_Matrix
                     if (j == matrix.GetLength(1) - 1)
                     {
                         Console.Write(matrix[i, j]);
+                        //Console.Write(matrix[i, j].ToString().PadLeft(3)); //PadLeft
                     }
                     else
                     {
                         Console.Write(matrix[i, j] + " ");
+                        //Console.Write(matrix[i, j].ToString().PadLeft(3) + " "); //PadLeft
                     }
-                    //Console.Write(matrix[i, j].ToString().PadLeft(3) + " "); //PadLeft
                 }
                 Console.WriteLine();
             }
         }
-
-
     }
-
 }
