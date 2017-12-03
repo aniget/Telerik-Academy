@@ -10,13 +10,12 @@ namespace _10.Unicode_characters
     {
         static void Main(string[] args)
         {
-            string value = Console.ReadLine(); ;
+            //string value = Console.ReadLine(); ;
+            string value = "Hi!";
 
-            var chars = value
-                .Select(c => (int)c)
-                .Select(c => $@"\u{c:x4}");
-
-            var result = string.Concat(chars);
+            int[] arr = value.ToCharArray().Select(m=>(int)m).ToArray();
+            
+            var result = string.Concat(arr);
             Console.WriteLine(result);
 
         }

@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task 1. Secret Numeral System", "Csharp_Advanced_practice\Task 1. Secret Numeral System.csproj", "{50F4048A-50EE-45F9-8A4F-9839C7B6D480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task 3. Sneaky the Snake", "Task 3. Sneaky the Snake\Task 3. Sneaky the Snake.csproj", "{B0802CD1-3906-4D5A-8401-0B0B6E79AD7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Bishop Path Finder", "..\MDA_practice\07. Bishop Path Finder\07. Bishop Path Finder.csproj", "{E82B3886-10A9-4C04-8BF5-90DA339DC941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task 4. GoshoCode", "Task 4. GoshoCode\Task 4. GoshoCode.csproj", "{F4B2E52A-D95F-4611-B3CB-E24A17455E90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{50F4048A-50EE-45F9-8A4F-9839C7B6D480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50F4048A-50EE-45F9-8A4F-9839C7B6D480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50F4048A-50EE-45F9-8A4F-9839C7B6D480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0802CD1-3906-4D5A-8401-0B0B6E79AD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0802CD1-3906-4D5A-8401-0B0B6E79AD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0802CD1-3906-4D5A-8401-0B0B6E79AD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0802CD1-3906-4D5A-8401-0B0B6E79AD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82B3886-10A9-4C04-8BF5-90DA339DC941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82B3886-10A9-4C04-8BF5-90DA339DC941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82B3886-10A9-4C04-8BF5-90DA339DC941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82B3886-10A9-4C04-8BF5-90DA339DC941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B2E52A-D95F-4611-B3CB-E24A17455E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B2E52A-D95F-4611-B3CB-E24A17455E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B2E52A-D95F-4611-B3CB-E24A17455E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B2E52A-D95F-4611-B3CB-E24A17455E90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
