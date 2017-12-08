@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. String length", "Strings_practice\06. String length.csproj", "{8F4F79DF-95B8-4B52-8666-9ABE86C2E8F2}"
 EndProject
@@ -17,7 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Extract sentences", "08
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Unicode characters", "10. Unicode characters\10. Unicode characters.csproj", "{5926C168-82DF-4E5C-AD67-D7C6DF6404DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitty", "Kitty\Kitty.csproj", "{D93ECA3D-02DA-4902-89BD-E8BD0248D3E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. Replace tags", "15. Replace tags\15. Replace tags.csproj", "{29EBF1DF-EEDD-46FB-B215-6B61AB787B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Parse URL", "12. Parse URL\12. Parse URL.csproj", "{B37830F1-E30D-4EA4-8DA9-2E047DAE7EDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23. Series of Letters", "23. Series of Letters\23. Series of Letters.csproj", "{084B133E-5132-4EDB-B054-6F4D676D3741}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +57,18 @@ Global
 		{5926C168-82DF-4E5C-AD67-D7C6DF6404DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5926C168-82DF-4E5C-AD67-D7C6DF6404DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5926C168-82DF-4E5C-AD67-D7C6DF6404DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D93ECA3D-02DA-4902-89BD-E8BD0248D3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D93ECA3D-02DA-4902-89BD-E8BD0248D3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D93ECA3D-02DA-4902-89BD-E8BD0248D3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D93ECA3D-02DA-4902-89BD-E8BD0248D3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29EBF1DF-EEDD-46FB-B215-6B61AB787B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29EBF1DF-EEDD-46FB-B215-6B61AB787B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29EBF1DF-EEDD-46FB-B215-6B61AB787B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29EBF1DF-EEDD-46FB-B215-6B61AB787B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37830F1-E30D-4EA4-8DA9-2E047DAE7EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37830F1-E30D-4EA4-8DA9-2E047DAE7EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37830F1-E30D-4EA4-8DA9-2E047DAE7EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37830F1-E30D-4EA4-8DA9-2E047DAE7EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084B133E-5132-4EDB-B054-6F4D676D3741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084B133E-5132-4EDB-B054-6F4D676D3741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084B133E-5132-4EDB-B054-6F4D676D3741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084B133E-5132-4EDB-B054-6F4D676D3741}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
