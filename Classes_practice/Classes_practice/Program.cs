@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Classes_practice
 {
     class Program
     {
         static void Main(string[] args)
         {
+            //create new instance of class Person and call it p1
             Person p1 = new Person();
-
-            p1.Speak();
+            p1.PrintInfo();
+            int inputYears = int.Parse(System.Console.ReadLine());
+            Person p2 = new Person(inputYears);
+            p2.PrintInfo();
 
         }
     }
