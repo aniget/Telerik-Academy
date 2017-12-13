@@ -10,8 +10,7 @@ namespace AutoService
     {
         static void Main(string[] args)
         {
-
-
+            Console.WriteLine("Alex made some changes for test!");
         }
     }
 }
