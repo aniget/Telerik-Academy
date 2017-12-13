@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using AutoService.Models.Contracts;
 
 namespace AutoService.Models.Models
@@ -10,7 +11,9 @@ namespace AutoService.Models.Models
         private string taxNumber;
         private string uniqueNumber;
         private decimal creditLimit;
-
+        private ICollection<Invoice> invoices;
+        
+        // company might not have a tax number so it might not be provided
         public Company(string name, string address, string uniqueNumber, decimal creditLimit)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -37,6 +40,7 @@ namespace AutoService.Models.Models
             }
 
             this.creditLimit = creditLimit;
+            this.invoices = new List<Invoice>();
         }
 
         public Company(string name, string address, string uniqueNumber, decimal creditLimit, string taxNumber)
@@ -51,6 +55,7 @@ namespace AutoService.Models.Models
         public string TaxNumber { get { return this.taxNumber; } }
         public string UniqueNumber { get { return this.uniqueNumber; } }
         public decimal CreditLimit { get { return this.creditLimit; } }
+        public ICollection<Invoice> Invoices { get { return this.invoices; } } // ReadOnlyCollection?
 
         public void UpdateCreditLimit(decimal creditLimit)
         {
@@ -64,6 +69,15 @@ namespace AutoService.Models.Models
         public void ChangeAddress(string address)
         {
             this.address = address;
+        }
+
+        public void ChangeTaxNumber(string number)
+        {
+            if (string.IsNullOrWhiteSpace(number))
+            {
+                throw new ArgumentException("Tax number provided is not valid!");
+            }
+            this.taxNumber = number;
         }
     }
 }
