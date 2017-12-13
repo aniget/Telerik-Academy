@@ -40,15 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IPart.cs" />
+    <Compile Include="Enums\PartMainCategory.cs" />
+    <Compile Include="Enums\PartSubCategory.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Contracts\IClient.cs" />
     <Compile Include="Contracts\ICompany.cs" />
     <Compile Include="Contracts\IVendor.cs" />
+    <Compile Include="Models\Part.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

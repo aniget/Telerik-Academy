@@ -25,6 +25,7 @@ namespace AutoService.Models.Models
         }
 
         public int DueDaysAllowed { get { return this.dueDaysAllowed; } }
+
         public void UpdateDueDays(int dueDays)
         {
             if (dueDays < 0)

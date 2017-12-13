@@ -3,7 +3,7 @@ using AutoService.Models.Contracts;
 
 namespace AutoService.Models.Models
 {
-    public class Company : ICompany
+    public abstract class Company : ICompany
     {
         private string name;
         private string address;
@@ -67,3 +67,4 @@ namespace AutoService.Models.Models
         }
     }
 }
+        
