@@ -1,4 +1,7 @@
-﻿namespace AutoService.Models.Contracts
+﻿using System.Collections.Generic;
+using AutoService.Models.Models;
+
+namespace AutoService.Models.Contracts
 {
     public interface ICompany
     {
@@ -12,8 +15,12 @@
 
         decimal CreditLimit { get; }
 
+        ICollection<Invoice> Invoices { get; }
+
         void UpdateCreditLimit(decimal creditLimit);
 
         void ChangeAddress(string address);
+
+        void ChangeTaxNumber(string number);
     }
 }
