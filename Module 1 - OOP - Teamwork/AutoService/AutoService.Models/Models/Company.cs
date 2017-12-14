@@ -14,7 +14,7 @@ namespace AutoService.Models.Models
         private ICollection<Invoice> invoices;
         
         // company might not have a tax number so it might not be provided
-        public Company(string name, string address, string uniqueNumber, decimal creditLimit)
+        protected Company(string name, string address, string uniqueNumber, decimal creditLimit)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -43,7 +43,7 @@ namespace AutoService.Models.Models
             this.invoices = new List<Invoice>();
         }
 
-        public Company(string name, string address, string uniqueNumber, decimal creditLimit, string taxNumber)
+        protected Company(string name, string address, string uniqueNumber, decimal creditLimit, string taxNumber)
             : this(name, address, uniqueNumber, creditLimit)
         {
             this.taxNumber = taxNumber;
